@@ -1,129 +1,133 @@
-import UseContext from '../Context'
-import { useContext, useState, useEffect } from 'react'
-import Error from '../assets/error.png'
-import '../css/ErrorBtn.css'
+import UseContext from "../Context";
+import { useContext, useState, useEffect } from "react";
+import Error from "../assets/error.png";
+import "../css/ErrorBtn.css";
 
-function ErrorBtn({themeDragBar, stateVal, text, setStateVal, runOpenFuction}) {
-    const [YesNo, setYesNo] = useState(false)
-    const [Content, setContent] = useState('')
+function ErrorBtn({
+	themeDragBar,
+	stateVal,
+	text,
+	setStateVal,
+	runOpenFuction,
+}) {
+	const [YesNo, setYesNo] = useState(false);
+	const [Content, setContent] = useState("");
 
-    const { 
-        handleSetFocusItemTrue, setRunCatVideo 
+	const { handleSetFocusItemTrue, setRunglitchVideo } = useContext(UseContext);
+	const textResetStroage =
+		"Warning: Resetting local storage will erase all your info. Are you sure you want to continue?";
+	const textGithub =
+		"Warning: You will be redirecting to another site, are you sure you want to continue?";
+	const textCat =
+		"Warning: Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai !";
 
-    } = useContext(UseContext);
-    const textResetStroage = "Warning: Resetting local storage will erase all your info. Are you sure you want to continue?"
-    const textGithub = "Warning: You will be redirecting to another site, are you sure you want to continue?"
-    const textCat = "Warning: Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai !"
+	useEffect(() => {
+		handleBtn(stateVal);
+	}, [stateVal]);
 
+	function handleBtn(name) {
+		switch (name.toLowerCase()) {
+			case "resetstorage":
+				setYesNo(true);
+				setContent(textResetStroage);
+				break;
 
-    useEffect(() => {
-        handleBtn(stateVal)
-    }, [stateVal]); 
+			case "x":
+				setYesNo(true);
+				setContent(textGithub);
+				break;
 
-    function handleBtn(name) {
-        switch (name.toLowerCase()) {
-            case "resetstorage":
-                setYesNo(true);
-                setContent(textResetStroage);
-                break;
+			case "webresume":
+				setYesNo(true);
+				setContent(textGithub);
+				break;
 
-            case "github":
-                setYesNo(true);
-                setContent(textGithub);
-                break;
+			case "glitch":
+				setYesNo(true);
+				setContent(textCat);
+				break;
 
-            case "webresume":
-                setYesNo(true);
-                setContent(textGithub);
-                break;
+			default:
+				setYesNo(false);
+				setContent(text);
+				break;
+		}
+	}
 
-            case "cat":
-                setYesNo(true);
-                setContent(textCat);
-                break;
+	function handleFunction(name) {
+		switch (name.toLowerCase()) {
+			case "resetstorage":
+				return removeLocalStorage();
 
-            default:
-                setYesNo(false);
-                setContent(text);
-                break;
-        }
-    }
-    
+			case "x":
+				return window.open("https://x.com/GlitchMemewtf/", "_blank");
 
-    function handleFunction(name) {
-        switch (name.toLowerCase()) {
-            case "resetstorage":
-                return removeLocalStorage();
+			case "webresume":
+				return window.open(
+					"https://yuteoctober.github.io/resume_web/",
+					"_blank"
+				);
 
-            case "github": 
-                return window.open('https://github.com/Yuteoctober/wins95Portfolio/', '_blank');
+			case "glitch":
+				setRunglitchVideo(true);
+				return;
 
-            case "webresume": 
-                
-            return window.open('https://yuteoctober.github.io/resume_web/', '_blank');
-            
-            case "cat": 
-                setRunCatVideo(true)
-                return;
+			default:
+				return runOpenFuction();
+		}
+	}
 
-            default:
-                return runOpenFuction();
-        }
-    }
-    
-    function removeLocalStorage() {
-        localStorage.clear();
-        location.reload();
-    }
+	function removeLocalStorage() {
+		localStorage.clear();
+		location.reload();
+	}
 
-  return (
-    <div className="error_container"
-    onClick={(e) => {
-        e.stopPropagation();
-        handleSetFocusItemTrue('');
-      }}
-    >
-        <div className="bar_tap"
-            style={{ background: themeDragBar }}
-        >
-            <p>{stateVal}</p>
-            <div 
-                onClick={() => {
-                    setStateVal(false)
-                    runOpenFuction()
-                }}
-            >
-                <p>×</p>
-            </div>
-        </div>
-        <div className="error_message_container">
-            <img src={Error} alt="error" />
-            <p>{Content}</p>
-        </div>
-        <div className={`confirm_container${YesNo ? '' : 'none'}`}>
-            <div className="error_ok_btn"
-                onClick={() => {
-                    setStateVal(false)
-                    handleFunction(stateVal)
-                }}
-                
-            >
-                <p>{YesNo ? 'YES' : 'OK'}</p>
-            </div>
-            {YesNo && (
-             <div className="error_ok_btn"
-                onClick={() => {
-                    setStateVal(false)
-                }}
-                
-            >
-                <p>NO</p>
-            </div>   
-            )}
-            
-        </div>
-    </div>
-  )
+	return (
+		<div
+			className="error_container"
+			onClick={(e) => {
+				e.stopPropagation();
+				handleSetFocusItemTrue("");
+			}}
+		>
+			<div className="bar_tap" style={{ background: themeDragBar }}>
+				<p>{stateVal}</p>
+				<div
+					onClick={() => {
+						setStateVal(false);
+						runOpenFuction();
+					}}
+				>
+					<p>×</p>
+				</div>
+			</div>
+			<div className="error_message_container">
+				<img src={Error} alt="error" />
+				<p>{Content}</p>
+			</div>
+			<div className={`confirm_container${YesNo ? "" : "none"}`}>
+				<div
+					className="error_ok_btn"
+					onClick={() => {
+						setStateVal(false);
+						handleFunction(stateVal);
+					}}
+				>
+					<p>{YesNo ? "YES" : "OK"}</p>
+				</div>
+				{YesNo && (
+					<div
+						className="error_ok_btn"
+						onClick={() => {
+							setStateVal(false);
+						}}
+					>
+						<p>NO</p>
+					</div>
+				)}
+			</div>
+		</div>
+	);
 }
 
-export default ErrorBtn
+export default ErrorBtn;

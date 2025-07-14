@@ -6,7 +6,7 @@
 //           setResumeExpand(prev => ({...prev, focusItem: false}));
 //           setProjectExpand(prev => ({...prev, focusItem: false}));
 //           setMailExpand(prev => ({...prev, focusItem: false}));
-//           setNftExpand(prev => ({...prev, focusItem: false}));
+//           setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //           setNoteExpand(prev => ({...prev, focusItem: false}));
 //           setTypeExpand(prev => ({...prev, focusItem: false}));
 //           setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -27,7 +27,7 @@
 //           setMybioExpand(prev => ({...prev, focusItem: false}));
 //           setProjectExpand(prev => ({...prev, focusItem: false}));
 //           setMailExpand(prev => ({...prev, focusItem: false}));
-//           setNftExpand(prev => ({...prev, focusItem: false}));
+//           setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //           setNoteExpand(prev => ({...prev, focusItem: false}));
 //           setTypeExpand(prev => ({...prev, focusItem: false}));
 //           setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -45,7 +45,7 @@
 //           setResumeExpand(prev => ({...prev, focusItem: false}));
 //           setMybioExpand(prev => ({...prev, focusItem: false}));
 //           setMailExpand(prev => ({...prev, focusItem: false}));
-//           setNftExpand(prev => ({...prev, focusItem: false}));
+//           setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //           setNoteExpand(prev => ({...prev, focusItem: false}));
 //           setTypeExpand(prev => ({...prev, focusItem: false}));
 //           setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -63,7 +63,7 @@
 //           setResumeExpand(prev => ({...prev, focusItem: false}));
 //           setMybioExpand(prev => ({...prev, focusItem: false}));
 //           setProjectExpand(prev => ({...prev, focusItem: false}));
-//           setNftExpand(prev => ({...prev, focusItem: false}));
+//           setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //           setNoteExpand(prev => ({...prev, focusItem: false}));
 //           setTypeExpand(prev => ({...prev, focusItem: false}));
 //           setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -77,8 +77,8 @@
 //         })));
 //         break;
 
-//       case 'Nft': 
-//           setNftExpand(prev => ({...prev, show: true, focusItem: true, hide: false}));
+//       case 'Dexscreener': 
+//           setDexscreenerExpand(prev => ({...prev, show: true, focusItem: true, hide: false}));
 //           setResumeExpand(prev => ({...prev, focusItem: false}));
 //           setMybioExpand(prev => ({...prev, focusItem: false}));
 //           setProjectExpand(prev => ({...prev, focusItem: false}));
@@ -100,7 +100,7 @@
 //           setResumeExpand(prev => ({...prev, focusItem: false}));
 //           setMybioExpand(prev => ({...prev, focusItem: false}));
 //           setProjectExpand(prev => ({...prev, focusItem: false}));
-//           setNftExpand(prev => ({...prev, focusItem: false}));
+//           setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //           setMailExpand(prev => ({...prev, focusItem: false}));
 //           setTypeExpand(prev => ({...prev, focusItem: false}));
 //           setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -118,7 +118,7 @@
 //           setResumeExpand(prev => ({...prev, focusItem: false}));
 //           setMybioExpand(prev => ({...prev, focusItem: false}));
 //           setProjectExpand(prev => ({...prev, focusItem: false}));
-//           setNftExpand(prev => ({...prev, focusItem: false}));
+//           setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //           setNoteExpand(prev => ({...prev, focusItem: false}));
 //           setMailExpand(prev => ({...prev, focusItem: false}));
 //           setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -145,7 +145,7 @@
 //           setResumeExpand(prev => ({...prev, focusItem: false}));
 //           setMybioExpand(prev => ({...prev, focusItem: false}));
 //           setProjectExpand(prev => ({...prev, focusItem: false}));
-//           setNftExpand(prev => ({...prev, focusItem: false}));
+//           setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //           setNoteExpand(prev => ({...prev, focusItem: false}));
 //           setMailExpand(prev => ({...prev, focusItem: false}));
 //           setTypeExpand(prev => ({...prev, focusItem: false}));
@@ -163,7 +163,7 @@
 //         setResumeExpand(prev => ({...prev, focusItem: false}));
 //         setMybioExpand(prev => ({...prev, focusItem: false}));
 //         setProjectExpand(prev => ({...prev, focusItem: false}));
-//         setNftExpand(prev => ({...prev, focusItem: false}));
+//         setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //         setNoteExpand(prev => ({...prev, focusItem: false}));
 //         setMailExpand(prev => ({...prev, focusItem: false}));
 //         setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -188,7 +188,7 @@
 //       setResumeExpand(prev => ({...prev, focusItem: false})); 
 //       setProjectExpand(prev => ({...prev, focusItem: false}));
 //       setMailExpand(prev => ({...prev, focusItem: false}));
-//       setNftExpand(prev => ({...prev, focusItem: false}));
+//       setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //       setNoteExpand(prev => ({...prev, focusItem: false}));
 //       setTypeExpand(prev => ({...prev, focusItem: false}));
 //       setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -206,7 +206,7 @@
 //       setMybioExpand(prev => ({...prev, focusItem: false}));
 //       setProjectExpand(prev => ({...prev, focusItem: false}));
 //       setMailExpand(prev => ({...prev, focusItem: false}));
-//       setNftExpand(prev => ({...prev, focusItem: false}));
+//       setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //       setNoteExpand(prev => ({...prev, focusItem: false}));
 //       setTypeExpand(prev => ({...prev, focusItem: false}));
 //       setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -224,7 +224,7 @@
 //       setResumeExpand(prev => ({...prev, focusItem: false}));
 //       setMybioExpand(prev => ({...prev, focusItem: false}));
 //       setMailExpand(prev => ({...prev, focusItem: false}));
-//       setNftExpand(prev => ({...prev, focusItem: false}));
+//       setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //       setNoteExpand(prev => ({...prev, focusItem: false}));
 //       setTypeExpand(prev => ({...prev, focusItem: false}));
 //       setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -242,7 +242,7 @@
 //         setResumeExpand(prev => ({...prev, focusItem: false}));
 //         setMybioExpand(prev => ({...prev, focusItem: false}));
 //         setProjectExpand(prev => ({...prev, focusItem: false}));
-//         setNftExpand(prev => ({...prev, focusItem: false}));
+//         setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //         setNoteExpand(prev => ({...prev, focusItem: false}));
 //         setTypeExpand(prev => ({...prev, focusItem: false}));
 //         setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -256,8 +256,8 @@
 //     })));
 //     break;
 
-//     case 'Nft': 
-//         setNftExpand(prev => ({...prev, show: true, focusItem: true, hide: false}));
+//     case 'Dexscreener': 
+//         setDexscreenerExpand(prev => ({...prev, show: true, focusItem: true, hide: false}));
 //         setResumeExpand(prev => ({...prev, focusItem: false}));
 //         setMybioExpand(prev => ({...prev, focusItem: false}));
 //         setProjectExpand(prev => ({...prev, focusItem: false}));
@@ -279,7 +279,7 @@
 //         setResumeExpand(prev => ({...prev, focusItem: false}));
 //         setMybioExpand(prev => ({...prev, focusItem: false}));
 //         setProjectExpand(prev => ({...prev, focusItem: false}));
-//         setNftExpand(prev => ({...prev, focusItem: false}));
+//         setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //         setMailExpand(prev => ({...prev, focusItem: false}));
 //         setTypeExpand(prev => ({...prev, focusItem: false}));
 //         setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -297,7 +297,7 @@
 //         setResumeExpand(prev => ({...prev, focusItem: false}));
 //         setMybioExpand(prev => ({...prev, focusItem: false}));
 //         setProjectExpand(prev => ({...prev, focusItem: false}));
-//         setNftExpand(prev => ({...prev, focusItem: false}));
+//         setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //         setNoteExpand(prev => ({...prev, focusItem: false}));
 //         setMailExpand(prev => ({...prev, focusItem: false}));
 //         setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -325,7 +325,7 @@
 //         setResumeExpand(prev => ({...prev, focusItem: false}));
 //         setMybioExpand(prev => ({...prev, focusItem: false}));
 //         setProjectExpand(prev => ({...prev, focusItem: false}));
-//         setNftExpand(prev => ({...prev, focusItem: false}));
+//         setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //         setNoteExpand(prev => ({...prev, focusItem: false}));
 //         setMailExpand(prev => ({...prev, focusItem: false}));
 //         setTypeExpand(prev => ({...prev, focusItem: false}));
@@ -343,7 +343,7 @@
 //         setResumeExpand(prev => ({...prev, focusItem: false}));
 //         setMybioExpand(prev => ({...prev, focusItem: false}));
 //         setProjectExpand(prev => ({...prev, focusItem: false}));
-//         setNftExpand(prev => ({...prev, focusItem: false}));
+//         setDexscreenerExpand(prev => ({...prev, focusItem: false}));
 //         setNoteExpand(prev => ({...prev, focusItem: false}));
 //         setMailExpand(prev => ({...prev, focusItem: false}));
 //         setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -372,7 +372,7 @@
     //             setResumeExpand(prev => ({...prev, focusItem: false}));
     //             setProjectExpand(prev => ({...prev, focusItem: false}));
     //             setMailExpand(prev => ({...prev, focusItem: false}));
-    //             setNftExpand(prev => ({...prev, focusItem: false}));
+    //             setDexscreenerExpand(prev => ({...prev, focusItem: false}));
     //             setNoteExpand(prev => ({...prev, focusItem: false}));
     //             setTypeExpand(prev => ({...prev, focusItem: false}));
     //             setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -387,7 +387,7 @@
     //             setMybioExpand(prev => ({...prev, focusItem: false}));
     //             setProjectExpand(prev => ({...prev, focusItem: false}));
     //             setMailExpand(prev => ({...prev, focusItem: false}));
-    //             setNftExpand(prev => ({...prev, focusItem: false}));
+    //             setDexscreenerExpand(prev => ({...prev, focusItem: false}));
     //             setNoteExpand(prev => ({...prev, focusItem: false}));
     //             setTypeExpand(prev => ({...prev, focusItem: false}));
     //             setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -402,7 +402,7 @@
     //             setMybioExpand(prev => ({...prev, focusItem: false}));
     //             setResumeExpand(prev => ({...prev, focusItem: false}));
     //             setMailExpand(prev => ({...prev, focusItem: false}));
-    //             setNftExpand(prev => ({...prev, focusItem: false}));
+    //             setDexscreenerExpand(prev => ({...prev, focusItem: false}));
     //             setNoteExpand(prev => ({...prev, focusItem: false}));
     //             setTypeExpand(prev => ({...prev, focusItem: false}));
     //             setWinampExpand(prev => ({...prev, focusItem: false}));
@@ -417,18 +417,18 @@
     //             setMybioExpand(prev => ({...prev, focusItem: false}));
     //             setResumeExpand(prev => ({...prev, focusItem: false}));
     //             setProjectExpand(prev => ({...prev, focusItem: false}));
-    //             setNftExpand(prev => ({...prev, focusItem: false}));
+    //             setDexscreenerExpand(prev => ({...prev, focusItem: false}));
     //             setNoteExpand(prev => ({...prev, focusItem: false}));
     //             setTypeExpand(prev => ({...prev, focusItem: false}));
     //             setWinampExpand(prev => ({...prev, focusItem: false}));
     //             setResumeFileExpand(prev => ({...prev, focusItem: false}));
     //             break;
 
-    //         case 'Nft':
-    //             if(NftExpand.hide) {
-    //                 setNftExpand(prev => ({...prev, hide: false}));
+    //         case 'Dexscreener':
+    //             if(DexscreenerExpand.hide) {
+    //                 setDexscreenerExpand(prev => ({...prev, hide: false}));
     //             }
-    //             setNftExpand(prev => ({...prev, focusItem: true}));
+    //             setDexscreenerExpand(prev => ({...prev, focusItem: true}));
     //             setMybioExpand(prev => ({...prev, focusItem: false}));
     //             setResumeExpand(prev => ({...prev, focusItem: false}));
     //             setProjectExpand(prev => ({...prev, focusItem: false}));
@@ -448,7 +448,7 @@
     //             setResumeExpand(prev => ({...prev, focusItem: false}));
     //             setProjectExpand(prev => ({...prev, focusItem: false}));
     //             setMailExpand(prev => ({...prev, focusItem: false}));
-    //             setNftExpand(prev => ({...prev, focusItem: false}));
+    //             setDexscreenerExpand(prev => ({...prev, focusItem: false}));
     //             setTypeExpand(prev => ({...prev, focusItem: false}));
     //             setWinampExpand(prev => ({...prev, focusItem: false}));
     //             setResumeFileExpand(prev => ({...prev, focusItem: false}));
@@ -464,7 +464,7 @@
     //             setProjectExpand(prev => ({...prev, focusItem: false}));
     //             setMailExpand(prev => ({...prev, focusItem: false}));
     //             setNoteExpand(prev => ({...prev, focusItem: false}));
-    //             setNftExpand(prev => ({...prev, focusItem: false}));
+    //             setDexscreenerExpand(prev => ({...prev, focusItem: false}));
     //             setWinampExpand(prev => ({...prev, focusItem: false}));
     //             setResumeFileExpand(prev => ({...prev, focusItem: false}));
     //             break;
@@ -485,7 +485,7 @@
     //             setProjectExpand(prev => ({...prev, focusItem: false}));
     //             setMailExpand(prev => ({...prev, focusItem: false}));
     //             setNoteExpand(prev => ({...prev, focusItem: false}));
-    //             setNftExpand(prev => ({...prev, focusItem: false}));
+    //             setDexscreenerExpand(prev => ({...prev, focusItem: false}));
     //             setTypeExpand(prev => ({...prev, focusItem: false}));
     //             setResumeFileExpand(prev => ({...prev, focusItem: false}));
     //             break;
@@ -500,7 +500,7 @@
     //             setProjectExpand(prev => ({...prev, focusItem: false}));
     //             setMailExpand(prev => ({...prev, focusItem: false}));
     //             setNoteExpand(prev => ({...prev, focusItem: false}));
-    //             setNftExpand(prev => ({...prev, focusItem: false}));
+    //             setDexscreenerExpand(prev => ({...prev, focusItem: false}));
     //             setWinampExpand(prev => ({...prev, focusItem: false}));
     //             setTypeExpand(prev => ({...prev, focusItem: false}));
     //             break;
@@ -519,7 +519,7 @@
     //     setProjectExpand(prev => ({...prev, focusItem: false}))
     //     setMailExpand(prev => ({...prev, focusItem: false}))
     //     setResumeExpand(prev => ({...prev, focusItem: false}))
-    //     setNftExpand(prev => ({...prev, focusItem: false}))
+    //     setDexscreenerExpand(prev => ({...prev, focusItem: false}))
     //     setTypeExpand(prev => ({...prev, focusItem: false}))
     //     setWinampExpand(prev => ({...prev, focusItem: false, focus: false}))
     //     setResumeFileExpand(prev => ({...prev, focusItem: false}))
@@ -566,8 +566,8 @@
 //         ? { boxShadow: boxshadowstyleTrue, background: bgStyleTrue }
 //         : { boxShadow: boxshadowstyleFalse, background: bgStyleFalse };
 
-//     case 'Nft':
-//       return NftExpand.focusItem
+//     case 'Dexscreener':
+//       return DexscreenerExpand.focusItem
 //         ? { boxShadow: boxshadowstyleTrue, background: bgStyleTrue }
 //         : { boxShadow: boxshadowstyleFalse, background: bgStyleFalse };
 
@@ -642,7 +642,7 @@
 //     setIconState(updatedFocus);
 //     setProjectExpand(prev => ({...prev, item_1Focus: false, item_2Focus: false, item_3Focus: false}));
 //     setResumeExpand(prev => ({...prev, item_1Focus: false}));
-//     setNftExpand(prev => ({...prev, item_1Focus: false}));
+//     setDexscreenerExpand(prev => ({...prev, item_1Focus: false}));
 //     setNoteExpand(prev => ({...prev, item_1Focus: false}));
 //     setTypeExpand(prev => ({...prev, item_1Focus: false}));
 //     setWinampExpand(prev => ({...prev, focus: false}));
