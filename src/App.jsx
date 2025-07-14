@@ -550,7 +550,7 @@ function App() {
 		const connectWebSocket = async () => {
 			try {
 				// Wake up Render backend
-				await fetch(".");
+				// await fetch("https://notebackend4.onrender.com/ping");
 
 				socket.current = new WebSocket("wss://notebackend4.onrender.com");
 
@@ -635,7 +635,7 @@ function App() {
 	useEffect(() => {
 		// touch support device === true
 		iconFocusIcon(""); // make icon focus goes false
-		getChat();
+		// getChat();
 
 		const htmlElement = document.documentElement; //check if user is in frontend
 		htmlElement.addEventListener("mouseenter", handleMouseSeen);
@@ -1386,26 +1386,29 @@ function App() {
 	}
 
 	// Function to fetch chat data
-	async function getChat() {
-		try {
-			const response = await axios.get(`/`, {
-				headers: {
-					"Content-Type": "application/json",
-					"Access-Control-Allow-Origin": "*",
-				},
-			});
-			setChatDown(false);
-			setChatData(response.data.chat);
-			setLoadedMessages(response.data.chat.slice(-40));
-			// if(MSNExpand.show){
-			//   endOfMessagesRef.current?.scrollIntoView({ behavior: "smooth" });
-			// }
-			// setKeyChatSession(response.data.key)
-		} catch (error) {
-			setChatDown(true);
-			console.error("Error fetching Chat:", error);
-		}
-	}
+	// async function getChat() {
+	// 	try {
+	// 		const response = await axios.get(
+	// 			`https://notebackend4.onrender.com/chat/getchat/`,
+	// 			{
+	// 				headers: {
+	// 					"Content-Type": "application/json",
+	// 					"Access-Control-Allow-Origin": "*",
+	// 				},
+	// 			}
+	// 		);
+	// 		setChatDown(false);
+	// 		setChatData(response.data.chat);
+	// 		setLoadedMessages(response.data.chat.slice(-40));
+	// 		// if(MSNExpand.show){
+	// 		//   endOfMessagesRef.current?.scrollIntoView({ behavior: "smooth" });
+	// 		// }
+	// 		// setKeyChatSession(response.data.key)
+	// 	} catch (error) {
+	// 		setChatDown(true);
+	// 		console.error("Error fetching Chat:", error);
+	// 	}
+	// }
 
 	function ObjectState() {
 		// Add all the state realted to folder here !! very important
@@ -1645,7 +1648,7 @@ function App() {
 					if (lowerCaseName === "mail") clippySendemailfunction();
 					if (lowerCaseName === "winamp") clippySongFunction();
 					if (lowerCaseName === "msn") clippyUsernameFunction();
-					if (lowerCaseName === "Dexscreener") {
+					if (lowerCaseName === "dexscreener") {
 						handleDoubleClickiframe(
 							"Dexscreener",
 							setOpenProjectExpand,

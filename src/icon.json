@@ -37,13 +37,13 @@
 		"y": 5
 	},
 	{
-		"name": "MSN",
-		"pic": "MSN",
+		"name": "Winamp",
+		"pic": "Winamp",
 		"folderId": "Desktop",
-		"size": 1500,
+		"size": 4300,
 		"type": ".exe",
-		"x": 6,
-		"y": 6
+		"x": 7,
+		"y": 7
 	},
 	{
 		"name": "Winamp",
@@ -129,7 +129,7 @@
 	{
 		"name": "Bitcoin",
 		"pic": "Bitcoin",
-		"folderId": "Utility",
+		"folderId": "Utilitys",
 		"size": 500,
 		"type": ".exe",
 		"x": 15,
@@ -273,7 +273,7 @@
 	{
 		"name": "ResetStorage",
 		"pic": "ResetStorage",
-		"folderId": "Utility",
+		"folderId": "Utilitys",
 		"size": 20,
 		"type": ".exe",
 		"x": 32,

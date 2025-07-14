@@ -6,12 +6,16 @@ import About from "../assets/ipng.png";
 import bioVid from "../assets/vids.mp4";
 import techVid from "../assets/lore.mp4";
 import "../css/MyBioFolder.css";
+import { useRef } from "react";
 
 function MyBioFolder() {
 	const [generalTap, setGenerapTap] = useState(true);
 	const [technologyTap, setTechnologyTap] = useState(false);
 	const [hobbTap, setHobbTap] = useState(false);
 	const [copySuccess, setCopySuccess] = useState(false);
+	const generalVideoRef = useRef(null);
+	const technologyVideoRef = useRef(null);
+	const hobbyVideoRef = useRef(null);
 
 	const {
 		themeDragBar,
@@ -146,8 +150,8 @@ function MyBioFolder() {
 				disabled={MybioExpand.expand}
 				bounds={{ top: 0 }}
 				defaultPosition={{
-					x: window.innerWidth <= 500 ? 35 : 70,
-					y: window.innerWidth <= 500 ? 35 : 40,
+					x: window.innerWidth <= 500 ? 0 : 70,
+					y: window.innerWidth <= 500 ? 0 : 40,
 				}}
 				onStop={(event, data) => handleDragStop(event, data)}
 				onStart={() => handleSetFocusItemTrue("About")}
@@ -209,14 +213,21 @@ function MyBioFolder() {
 									onClick={
 										!isTouchDevice
 											? () => {
+													// Pause all videos
+													generalVideoRef.current?.pause();
+													technologyVideoRef.current?.pause();
+													hobbyVideoRef.current?.pause();
+
 													deleteTap("About");
-													handleBiotap("general");
 											  }
 											: undefined
 									}
 									onTouchEnd={() => {
+										generalVideoRef.current?.pause();
+										technologyVideoRef.current?.pause();
+										hobbyVideoRef.current?.pause();
+
 										deleteTap("About");
-										handleBiotap("general");
 									}}
 								>
 									×
@@ -246,23 +257,39 @@ function MyBioFolder() {
 					</div>
 					<div className="folder_content">
 						<div className="folder_content-bio" style={{ display: "block" }}>
-							{generalTap ? (
+							{generalTap && (
 								<video
+									ref={generalVideoRef}
 									className="bio_img_other"
 									autoPlay
 									controls
 									loop
 									playsInline
-									src={techVid} // Ganti dengan path sesuai file kamu
+									src={techVid}
 								/>
-							) : (
+							)}
+
+							{technologyTap && (
 								<video
+									ref={technologyVideoRef}
 									className="bio_img_other"
 									autoPlay
-									loop
 									controls
+									loop
 									playsInline
-									src={bioVid} // Ganti dengan path sesuai file kamu
+									src={bioVid}
+								/>
+							)}
+
+							{hobbTap && (
+								<video
+									ref={hobbyVideoRef}
+									className="bio_img_other"
+									autoPlay
+									controls
+									loop
+									playsInline
+									src={bioVid}
 								/>
 							)}
 
@@ -287,14 +314,21 @@ function MyBioFolder() {
 								onClick={
 									!isTouchDevice
 										? () => {
+												// Pause all videos
+												generalVideoRef.current?.pause();
+												technologyVideoRef.current?.pause();
+												hobbyVideoRef.current?.pause();
+
 												deleteTap("About");
-												handleBiotap("general");
 										  }
 										: undefined
 								}
 								onTouchEnd={() => {
+									generalVideoRef.current?.pause();
+									technologyVideoRef.current?.pause();
+									hobbyVideoRef.current?.pause();
+
 									deleteTap("About");
-									handleBiotap("general");
 								}}
 							>
 								<span>OK</span>
@@ -305,17 +339,24 @@ function MyBioFolder() {
 								onClick={
 									!isTouchDevice
 										? () => {
+												// Pause all videos
+												generalVideoRef.current?.pause();
+												technologyVideoRef.current?.pause();
+												hobbyVideoRef.current?.pause();
+
 												deleteTap("About");
-												handleBiotap("general");
 										  }
 										: undefined
 								}
 								onTouchEnd={() => {
+									generalVideoRef.current?.pause();
+									technologyVideoRef.current?.pause();
+									hobbyVideoRef.current?.pause();
+
 									deleteTap("About");
-									handleBiotap("general");
 								}}
 							>
-								<span>Cancel</span>
+								<span>Close</span>
 							</div>
 						</div>
 					</div>

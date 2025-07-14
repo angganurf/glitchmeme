@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import startIcon from "../assets/95icon.png";
 import run from "../assets/run.png";
 import github from "../assets/x.png";
-import linked from "../assets/linkedin.png";
+import dexscreener from "../assets/dexscreener.png";
 import sidebar from "../assets/sidebar95.png";
 import display from "../assets/display.png";
 import project from "../assets/regFolder.png";
@@ -87,10 +87,10 @@ export default function Footer() {
 
 	const footerItems = [
 		{
-			className: "project",
-			imgSrc: project,
-			imgAlt: "project",
-			spanText: "Project",
+			className: "utility",
+			imgSrc: resume,
+			imgAlt: "utility",
+			spanText: "Utility",
 			arrow: true,
 			onClick: () => {
 				setProjectStartBar(!projectStartBar);
@@ -102,10 +102,10 @@ export default function Footer() {
 			},
 		},
 		{
-			className: "resume",
+			className: "picture",
 			imgSrc: resume,
-			imgAlt: "resume",
-			spanText: "Resume",
+			imgAlt: "picture",
+			spanText: "Picture",
 			arrow: true,
 			onClick: () => {
 				setResumejectStartBar(!resumeStartBar);
@@ -141,11 +141,15 @@ export default function Footer() {
 			},
 		},
 		{
-			className: "linked",
-			imgSrc: linked,
-			imgAlt: "linked",
+			className: "Dexscreener",
+			imgSrc: dexscreener,
+			imgAlt: "dexscreener",
 			style: { borderRadius: "5px" },
-			spanText: "Linked",
+			spanText: "Dexscreener",
+			onClick: () => {
+				handleDoubleClickEnterLink("Dexscreener", handleShow);
+				setStartActive(false);
+			},
 			onmouseenter: () => {
 				setResumejectStartBar(false);
 				setProjectStartBar(false);
@@ -341,51 +345,51 @@ export default function Footer() {
 		});
 	}
 
-	useEffect(() => {
-		// display clippy when windows start
-		clearTimeout(firstTimoutShowclippy.current);
-		clearTimeout(ClearTOclippySendemailfunction.current);
-		clearTimeout(ClearTOclippyThanksYouFunction.curremt);
-		clearTimeout(ClearTOSongfunction.current);
-		clearTimeout(ClearTOclippyUsernameFunction.current);
+	// useEffect(() => {
+	// 	// display clippy when windows start
+	// 	clearTimeout(firstTimoutShowclippy.current);
+	// 	clearTimeout(ClearTOclippySendemailfunction.current);
+	// 	clearTimeout(ClearTOclippyThanksYouFunction.curremt);
+	// 	clearTimeout(ClearTOSongfunction.current);
+	// 	clearTimeout(ClearTOclippyUsernameFunction.current);
 
-		setShowClippy(true);
-		firstTimoutShowclippy.current = setTimeout(() => {
-			setShowClippy(false);
-		}, 10000);
+	// 	setShowClippy(true);
+	// 	firstTimoutShowclippy.current = setTimeout(() => {
+	// 		setShowClippy(false);
+	// 	}, 10000);
 
-		return () => {
-			clearTimeout(firstTimoutShowclippy.current);
-		};
-	}, []);
+	// 	return () => {
+	// 		clearTimeout(firstTimoutShowclippy.current);
+	// 	};
+	// }, []);
 
-	useEffect(() => {
-		//random clippy time
-		clearTimeout(SecondRandomTimeoutShowClippy.current);
-		const randomTime = Math.floor(Math.random() * (50000 - 30000 + 1)) + 30000;
+	// useEffect(() => {
+	// 	//random clippy time
+	// 	clearTimeout(SecondRandomTimeoutShowClippy.current);
+	// 	const randomTime = Math.floor(Math.random() * (50000 - 30000 + 1)) + 30000;
 
-		clearTimeout(ClearTOclippySendemailfunction.current);
-		clearTimeout(ClearTOclippyThanksYouFunction.curremt);
-		clearTimeout(ClearTOSongfunction.current);
+	// 	clearTimeout(ClearTOclippySendemailfunction.current);
+	// 	clearTimeout(ClearTOclippyThanksYouFunction.curremt);
+	// 	clearTimeout(ClearTOSongfunction.current);
 
-		RandomTimeoutShowClippy.current = setTimeout(() => {
-			// random clippy index from length
-			const randomIndex = Math.floor(
-				Math.random() * clippyPhrase.inspiration.length
-			);
-			setClippyIndex(randomIndex);
-			setShowClippy(true);
-			SecondRandomTimeoutShowClippy.current = setTimeout(() => {
-				setShowClippy(false);
-				setRandomClippyPopup((prev) => !prev);
-			}, 10000);
-		}, randomTime);
+	// 	RandomTimeoutShowClippy.current = setTimeout(() => {
+	// 		// random clippy index from length
+	// 		const randomIndex = Math.floor(
+	// 			Math.random() * clippyPhrase.inspiration.length
+	// 		);
+	// 		setClippyIndex(randomIndex);
+	// 		setShowClippy(true);
+	// 		SecondRandomTimeoutShowClippy.current = setTimeout(() => {
+	// 			setShowClippy(false);
+	// 			setRandomClippyPopup((prev) => !prev);
+	// 		}, 10000);
+	// 	}, randomTime);
 
-		return () => {
-			clearTimeout(RandomTimeoutShowClippy.current);
-			clearTimeout(SecondRandomTimeoutShowClippy.current);
-		};
-	}, [randomClippyPopup]);
+	// 	return () => {
+	// 		clearTimeout(RandomTimeoutShowClippy.current);
+	// 		clearTimeout(SecondRandomTimeoutShowClippy.current);
+	// 	};
+	// }, [randomClippyPopup]);
 
 	function dontTouch() {
 		// click on clippy while speaking, will active angry clippy
@@ -589,7 +593,7 @@ export default function Footer() {
 								style={{ display: projectFolderItem === 0 ? "none" : "" }}
 							>
 								{desktopIcon
-									.filter((icon) => icon.folderId === "Project")
+									.filter((icon) => icon.folderId === "Utility")
 									.map((icon) => (
 										<div
 											className="icon_sub_start"
@@ -612,7 +616,7 @@ export default function Footer() {
 								}}
 							>
 								{desktopIcon
-									.filter((icon) => icon.folderId === "Resume")
+									.filter((icon) => icon.folderId === "Picture")
 									.map((icon) => (
 										<div
 											className="icon_sub_start"

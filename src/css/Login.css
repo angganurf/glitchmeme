@@ -230,7 +230,7 @@
 		display: flex;
 		position: relative;
 		gap: 0.5rem;
-		/* justify-content: flex-end; */
+		justify-content: center;
 		/* right: 0.8rem; */
 	}
 

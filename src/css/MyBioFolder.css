@@ -4,7 +4,7 @@
 	display: none;
 	position: fixed;
 	width: 420px;
-	height: auto;
+	height: 520px;
 	min-height: 320px;
 	background: #c5c4c4;
 	border: 2px solid white;
@@ -179,7 +179,7 @@
 	margin: 0 auto;
 	margin-top: 0;
 	background: #c5c4c4;
-	overflow: hidden;
+	overflow-y: scroll;
 	word-break: break-word;
 	grid-template-areas: 
     /* 'bio_h1 bio_h1' */ "bio_img biotext_container";
