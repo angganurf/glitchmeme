@@ -1389,7 +1389,7 @@ function App() {
 	async function getChat() {
 		try {
 			const response = await axios.get(
-				`https://notebackend4.onrender.com/chat/getchat/`,
+				`https://corsproxy.io/?url=https://notebackend4.onrender.com/chat/getchat/`,
 				{
 					headers: {
 						"Content-Type": "application/json",
