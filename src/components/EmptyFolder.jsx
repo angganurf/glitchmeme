@@ -111,7 +111,7 @@ function EmptyFolder({
 			bounds={{ top: 0 }}
 			defaultPosition={{
 				x: window.innerWidth <= 500 ? 15 : 550,
-				y: window.innerWidth <= 500 ? 500 : 360,
+				y: window.innerWidth <= 500 ? 400 : 360,
 			}}
 			onStop={(event, data) => {
 				handleDragStop(event, data);

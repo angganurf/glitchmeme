@@ -150,7 +150,7 @@ function MyBioFolder() {
 				disabled={MybioExpand.expand}
 				bounds={{ top: 0 }}
 				defaultPosition={{
-					x: window.innerWidth <= 500 ? 0 : 70,
+					x: window.innerWidth <= 500 ? 15 : 70,
 					y: window.innerWidth <= 500 ? 0 : 40,
 				}}
 				onStop={(event, data) => handleDragStop(event, data)}

@@ -395,7 +395,7 @@ function App() {
 		// force user to update version by clearing their local storage!
 		setTimeout(() => {
 			handleShow("About");
-		}, 1500);
+		}, 2000);
 
 		const resetIcon = desktopIcon.find((icon) => icon.name === "3dObject");
 		if (!resetIcon) {
@@ -407,7 +407,7 @@ function App() {
 		// force user to update version by clearing their local storage!
 		setTimeout(() => {
 			handleShow("Picture");
-		}, 2800);
+		}, 1500);
 
 		const resetIcon = desktopIcon.find((icon) => icon.name === "3dObject");
 		if (!resetIcon) {
