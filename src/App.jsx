@@ -550,7 +550,7 @@ function App() {
 		const connectWebSocket = async () => {
 			try {
 				// Wake up Render backend
-				await fetch("https://notebackend4.onrender.com/ping");
+				await fetch(".");
 
 				socket.current = new WebSocket("wss://notebackend4.onrender.com");
 
@@ -1388,15 +1388,12 @@ function App() {
 	// Function to fetch chat data
 	async function getChat() {
 		try {
-			const response = await axios.get(
-				`https://corsproxy.io/?url=https://notebackend4.onrender.com/chat/getchat/`,
-				{
-					headers: {
-						"Content-Type": "application/json",
-						"Access-Control-Allow-Origin": "*",
-					},
-				}
-			);
+			const response = await axios.get(`/`, {
+				headers: {
+					"Content-Type": "application/json",
+					"Access-Control-Allow-Origin": "*",
+				},
+			});
 			setChatDown(false);
 			setChatData(response.data.chat);
 			setLoadedMessages(response.data.chat.slice(-40));
