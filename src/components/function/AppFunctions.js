@@ -278,7 +278,7 @@ export function handleDoubleClickiframe(name, setOpenProjectExpand, setProjectUr
 
   switch (name) {
     case 'Dexscreener':
-      setProjectUrl('https://dexscreener.com/solana/');
+      setProjectUrl(import.meta.env.VITE_DEXSCREENER_URL);
       break;
 
     case 'Note':
@@ -302,7 +302,7 @@ export function handleDoubleTapiframeMobile(name, lastTapTime, setLastTapTime, s
   if (now - lastTapTime < 300) {
     switch (name) {
       case 'Dexscreener':
-        setProjectUrl('https://dexscreener.com/solana/');
+        setProjectUrl(import.meta.env.VITE_DEXSCREENER_URL);
         break;
 
       case 'Note':
@@ -326,7 +326,7 @@ export function handleDoubleTapiframeMobile(name, lastTapTime, setLastTapTime, s
 export function handleDoubleClickEnterLink(name, handleshow) {
 
   switch (name) {
-    case 'Dexscreener': window.open('https://dexscreener.com/solana/', '_blank'); break;
+    case 'Dexscreener': window.open(import.meta.env.VITE_DEXSCREENER_URL, '_blank'); break;
     case 'Note': window.open('https://fullstack-stickynotes.netlify.app/', '_blank'); break;
     case 'Type': window.open('https://yuteoctober.github.io/typingGame/', '_blank'); break;
     case '3dObject': window.open('https://yuteoctober.github.io/3d_book/', '_blank'); break;
@@ -343,10 +343,10 @@ export function handleDoubleTapEnterMobile(name, lastTapTime, setLastTapTime, se
   const now = Date.now();
   if (now - lastTapTime < 300) {
     switch (name) {
-      case 'Dexscreener': window.open('https://dexscreener.com/solana/', '_blank'); break;
+      case 'Dexscreener': window.open(import.meta.env.VITE_DEXSCREENER_URL, '_blank'); break;
       case 'Note': window.open('https://fullstack-stickynotes.netlify.app/', '_blank'); break;
       case 'Type': window.open('https://yuteoctober.github.io/typingGame/', '_blank'); break;
-      case 'X': window.open('https://x.com/GlitchMemewtf/', '_blank'); break;
+      case 'X': window.open(import.meta.env.VITE_X_URL, '_blank'); break;
       case '3dObject': window.open('https://yuteoctober.github.io/3d_book/', '_blank'); break;
       default: break;
     }

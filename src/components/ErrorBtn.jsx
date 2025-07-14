@@ -60,7 +60,7 @@ function ErrorBtn({
 				return removeLocalStorage();
 
 			case "x":
-				return window.open("https://x.com/GlitchMemewtf/", "_blank");
+				return window.open(import.meta.env.VITE_X_URL, "_blank");
 
 			case "webresume":
 				return window.open(
