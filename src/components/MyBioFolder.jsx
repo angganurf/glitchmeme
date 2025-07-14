@@ -66,15 +66,15 @@ function MyBioFolder() {
 					<strong>CA: </strong>
 					<span
 						onClick={() => {
-							navigator.clipboard.writeText("0xADFaSdHFAsDFAsdfASDFsADFasf");
+							navigator.clipboard.writeText(import.meta.env.VITE_CA_ADDRESS);
 							setCopySuccess(true);
 							setTimeout(() => setCopySuccess(false), 2000);
 						}}
 						className="glitch"
-						data-text="0xADFaSdHFAsDFAsdfASDFsADFasf"
+						data-text={import.meta.env.VITE_CA_ADDRESS}
 						title="Click to copy"
 					>
-						0xADFaSdHFAsDFAsdfASDFsADFasf
+						{import.meta.env.VITE_CA_ADDRESS}
 					</span>
 					{copySuccess && (
 						<span
