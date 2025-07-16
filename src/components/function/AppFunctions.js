@@ -11,6 +11,7 @@ import ie from '../../assets/ie.png'
 import settings from '../../assets/setting.png'
 import file from '../../assets/file4download.png'
 import dexscreener from '../../assets/dexscreener.png'
+import pfpglitch from '../../assets/pfpglitch.png'
 import x from '../../assets/x.png'
 import disk from '../../assets/c.png'
 import rom from '../../assets/rom.png'
@@ -92,6 +93,8 @@ export function imageMapping(name) {
       return dexscreener;
     case 'X':
       return x;
+    case 'pfpglitch':
+      return pfpglitch;
     case 'Note':
       return file;
 
@@ -280,6 +283,9 @@ export function handleDoubleClickiframe(name, setOpenProjectExpand, setProjectUr
     case 'Dexscreener':
       setProjectUrl(import.meta.env.VITE_DEXSCREENER_URL);
       break;
+    case 'Pfpglitch':
+      setProjectUrl("https://gen.glitchmeme.wtf/");
+      break;
 
     case 'Note':
       setProjectUrl('https://fullstack-stickynotes.netlify.app/');
@@ -304,6 +310,9 @@ export function handleDoubleTapiframeMobile(name, lastTapTime, setLastTapTime, s
       case 'Dexscreener':
         setProjectUrl(import.meta.env.VITE_DEXSCREENER_URL);
         break;
+      case 'Pfpglitch':
+        setProjectUrl("https://gen.glitchmeme.wtf/");
+        break;
 
       case 'Note':
         setProjectUrl('https://fullstack-stickynotes.netlify.app/');
@@ -327,6 +336,7 @@ export function handleDoubleClickEnterLink(name, handleshow) {
 
   switch (name) {
     case 'Dexscreener': window.open(import.meta.env.VITE_DEXSCREENER_URL, '_blank'); break;
+    case 'Pfpglitch': window.open('https://gen.glitchmeme.wtf/', '_blank'); break;
     case 'Note': window.open('https://fullstack-stickynotes.netlify.app/', '_blank'); break;
     case 'Type': window.open('https://yuteoctober.github.io/typingGame/', '_blank'); break;
     case '3dObject': window.open('https://yuteoctober.github.io/3d_book/', '_blank'); break;
@@ -344,6 +354,7 @@ export function handleDoubleTapEnterMobile(name, lastTapTime, setLastTapTime, se
   if (now - lastTapTime < 300) {
     switch (name) {
       case 'Dexscreener': window.open(import.meta.env.VITE_DEXSCREENER_URL, '_blank'); break;
+      case 'Pfpglitch': window.open('https://gen.glitchmeme.wtf/', '_blank'); break;
       case 'Note': window.open('https://fullstack-stickynotes.netlify.app/', '_blank'); break;
       case 'Type': window.open('https://yuteoctober.github.io/typingGame/', '_blank'); break;
       case 'X': window.open(import.meta.env.VITE_X_URL, '_blank'); break;

@@ -191,6 +191,16 @@ function App() {
 		zIndex: 1,
 	});
 
+	const [PfpGlitchExpand, setPfpGlitchExpand] = useState({
+		expand: false,
+		show: false,
+		hide: false,
+		focusItem: true,
+		x: 0,
+		y: 0,
+		zIndex: 1,
+	});
+
 	const [NoteExpand, setNoteExpand] = useState({
 		expand: false,
 		show: false,
@@ -1026,6 +1036,8 @@ function App() {
 		setMailExpand,
 		DexscreenerExpand,
 		setDexscreenerExpand,
+		PfpGlitchExpand,
+		setPfpGlitchExpand,
 		NoteExpand,
 		setNoteExpand,
 		TypeExpand,
@@ -1422,6 +1434,11 @@ function App() {
 				setter: setDexscreenerExpand,
 				usestate: DexscreenerExpand,
 			},
+			{
+				name: "Pfpglitch",
+				setter: setPfpGlitchExpand,
+				usestate: PfpGlitchExpand,
+			},
 			{ name: "Note", setter: setNoteExpand, usestate: NoteExpand },
 			{
 				name: "AiAgent",
@@ -1557,6 +1574,14 @@ function App() {
 					handleDoubleClickiframe("Note", setOpenProjectExpand, setProjectUrl);
 					handleShow("Internet");
 				}
+				if (lowerCaseName === "pfpglitch") {
+					handleDoubleClickiframe(
+						"Pfpglitch",
+						setOpenProjectExpand,
+						setProjectUrl
+					);
+					handleShow("Internet");
+				}
 				if (lowerCaseName === "aiagent") {
 					handleDoubleClickiframe(
 						"AiAgent",
@@ -1582,6 +1607,7 @@ function App() {
 		if (
 			name === "Run" ||
 			name === "Dexscreener" ||
+			name === "Pfpglitch" ||
 			name === "Note" ||
 			name === "AiAgent" ||
 			name === "3dObject"
@@ -1656,6 +1682,14 @@ function App() {
 						);
 						handleShow("Internet");
 					}
+					if (lowerCaseName === "pfpglitch") {
+						handleDoubleClickiframe(
+							"Pfpglitch",
+							setOpenProjectExpand,
+							setProjectUrl
+						);
+						handleShow("Internet");
+					}
 					if (lowerCaseName === "note") {
 						handleDoubleClickiframe(
 							"Note",
@@ -1689,6 +1723,7 @@ function App() {
 			if (
 				name === "Run" ||
 				name === "Dexscreener" ||
+				name === "Pfpglitch" ||
 				name === "Note" ||
 				name === "AiAgent" ||
 				name === "3dObject"

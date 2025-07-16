@@ -262,6 +262,24 @@
 		"y": 30
 	},
 	{
+		"name": "PFP Glitch",
+		"pic": "pfpglitch",
+		"folderId": "Desktop",
+		"size": 5000,
+		"type": ".exe",
+		"x": 30,
+		"y": 30
+	},
+	{
+		"name": "PFP Glitch",
+		"pic": "pfpglitch",
+		"folderId": "Utility",
+		"size": 5000,
+		"type": ".exe",
+		"x": 30,
+		"y": 30
+	},
+	{
 		"name": "RecycleBin",
 		"pic": "RecycleBin",
 		"folderId": "Desktop",
