@@ -44,6 +44,17 @@ import {
 } from "./components/function/AppFunctions";
 
 function App() {
+	const CURRENT_VERSION = __APP_VERSION__;
+	const STORAGE_KEY = "app_version";
+	useEffect(() => {
+		const savedVersion = localStorage.getItem(STORAGE_KEY);
+
+		if (savedVersion !== CURRENT_VERSION) {
+			localStorage.clear(); // or selective clearing
+			localStorage.setItem(STORAGE_KEY, CURRENT_VERSION);
+			console.log("New version detected, localStorage cleared.");
+		}
+	}, []);
 	const [runglitchVideo, setRunglitchVideo] = useState(false);
 	const [newsPopup, setNewsPopup] = useState(false);
 	const [onlineUser, setOnlineUser] = useState(0);
