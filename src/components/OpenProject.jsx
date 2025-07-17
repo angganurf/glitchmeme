@@ -58,6 +58,7 @@ function OpenProject() {
 				handle={".folder_dragbar"}
 				grid={[1, 1]}
 				scale={1}
+				disabled={openProjectExpand.expand}
 				bounds={{ top: 0 }}
 				defaultPosition={{
 					x: window.innerWidth <= 500 ? 5 : 80,

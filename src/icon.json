@@ -316,6 +316,15 @@
 		"y": 34
 	},
 	{
+		"name": "Utility",
+		"pic": "Utility",
+		"folderId": "Desktop",
+		"size": 2500,
+		"type": "folder",
+		"x": 34,
+		"y": 34
+	},
+	{
 		"name": "Patch",
 		"pic": "Patch",
 		"folderId": "Utility",
