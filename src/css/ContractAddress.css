@@ -1,0 +1,175 @@
+/* Contract Address Dialog Styles */
+
+.contract_dialog {
+    display: none;
+    position: fixed;
+    width: 35%;
+    height: 300px;
+    min-height: 200px;
+    background: #c5c4c4;
+    border: 2px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    outline: 1px solid white;
+    overflow: hidden;
+    resize: none;
+    font-family: 'MS Sans Serif', sans-serif;
+}
+
+.contract_dialog .contract_dragbar {
+    display: flex;
+    position: relative;
+    height: 24px;
+    width: 100%;
+    margin-bottom: 1px;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.contract_barname img {
+    position: relative;
+    width: 16px;
+    top: 3px;
+    margin-left: 5px;
+}
+
+.contract_barname span {
+    position: relative;
+    font-size: 15px;
+    color: white;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.contract_dialog .contract_barbtn {
+    display: flex;
+    position: relative;
+    margin-right: 4px;
+    gap: 2px;
+}
+
+.contract_minimize_btn,
+.contract_expand_btn,
+.contract_close_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 14px;
+    background: #c5c4c4;
+    border: 1px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+.contract_minimize_btn:active,
+.contract_expand_btn:active,
+.contract_close_btn:active {
+    border: 1px solid black;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.contract_expand_btn_inner {
+    width: 8px;
+    height: 6px;
+    border: 1px solid black;
+    background: transparent;
+}
+
+.contract_content {
+    padding: 20px;
+    height: calc(100% - 45px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contract_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.contract_form label {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.contract_input {
+    width: 100%;
+    height: 35px;
+    padding: 4px 8px;
+    border: 2px inset #c5c4c4;
+    background: white;
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: black;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.contract_input:focus {
+    background: #316ac5;
+    color: white;
+}
+
+.copy_ca_btn {
+    width: 150px;
+    height: 50px;
+    background: #c5c4c4;
+    border: 2px outset #c5c4c4;
+    font-family: 'MS Sans Serif', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 5px;
+}
+
+.copy_ca_btn:hover {
+    background: #d4d4d4;
+}
+
+.copy_ca_btn:active {
+    border: 2px inset #c5c4c4;
+}
+
+.copy_success {
+    align-self: center;
+    color: #008000;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 8px;
+    text-align: center;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 500px) {
+    .contract_dialog {
+        width: 320px;
+        height: 180px;
+    }
+    .contract_content {
+        padding: 15px;
+    }
+    .contract_form {
+        max-width: 250px;
+    }
+}
