@@ -39,377 +39,413 @@ import ThreedObject from '../../assets/3dObject.png'
 
 // style function for bg tap
 export function StyleHide(index, tap, ObjectState) {
-  const boxshadowstyleTrue = 'inset 1px 1px #000, 1px 1px #ffffffdd';
-  const bgStyleTrue = '#dddcdc';
+    const boxshadowstyleTrue = 'inset 1px 1px #000, 1px 1px #ffffffdd';
+    const bgStyleTrue = '#dddcdc';
 
-  const boxshadowstyleFalse = 'inset 1px 1px #ffffffdd, 1.5px 1.5px #000';
-  const bgStyleFalse = '#b3b2b2';
+    const boxshadowstyleFalse = 'inset 1px 1px #ffffffdd, 1.5px 1.5px #000';
+    const bgStyleFalse = '#b3b2b2';
 
-  const setState = ObjectState();
+    const setState = ObjectState();
 
-  const namePassed = tap[index].split(' ').join('').toLowerCase();
+    const namePassed = tap[index].split(' ').join('').toLowerCase();
 
-  const foundItem = setState.find(item => {
-    const itemName = item.name.split(' ').join('').toLowerCase();
+    const foundItem = setState.find(item => {
+        const itemName = item.name.split(' ').join('').toLowerCase();
 
-    return itemName === namePassed
-  })
+        return itemName === namePassed
+    })
 
-  if (foundItem) {
-    return foundItem.usestate.focusItem
-      ? { boxShadow: boxshadowstyleTrue, background: bgStyleTrue }
-      : { boxShadow: boxshadowstyleFalse, background: bgStyleFalse };
-  }
+    if (foundItem) {
+        return foundItem.usestate.focusItem ?
+            { boxShadow: boxshadowstyleTrue, background: bgStyleTrue } :
+            { boxShadow: boxshadowstyleFalse, background: bgStyleFalse };
+    }
 
-  return {};
+    return {};
 
 }
 
 
 // Mapping image function
 export function imageMapping(name) {
-  switch (name) {
+    switch (name) {
 
-    case 'About':
-    case 'about':
-      return About;
+        case 'About':
+        case 'about':
+            return About;
 
-    case 'MyComputer':
-    case 'My Computer':
-      return MyComputer;
+        case 'MyComputer':
+        case 'My Computer':
+            return MyComputer;
 
-    case 'Resume':
-      return Resume;
+        case 'Resume':
+            return Resume;
 
-    case 'Mail':
-      return Mail;
+        case 'Mail':
+            return Mail;
 
-    case 'Project':
-    case 'Picture':
-    case 'Utility':
-      return Project;
+        case 'Project':
+        case 'Picture':
+        case 'Utility':
+            return Project;
 
-    case 'Dexscreener':
-      return dexscreener;
-    case 'X':
-      return x;
-    case 'pfpglitch':
-      return pfpglitch;
-    case 'Note':
-      return file;
+        case 'Dexscreener':
+            return dexscreener;
+        case 'X':
+            return x;
+        case 'pfpglitch':
+            return pfpglitch;
+        case 'Note':
+            return file;
 
-    case 'Winamp':
-      return Winamp;
+        case 'Winamp':
+            return Winamp;
 
-    case 'ResumeFile':
-      return resumefile;
+        case 'ResumeFile':
+            return resumefile;
 
-    case 'MineSweeper':
-    case 'Mine Sweeper':
-      return MineSweeper;
+        case 'MineSweeper':
+        case 'Mine Sweeper':
+            return MineSweeper;
 
-    case 'MSN':
-      return MSN;
+        case 'MSN':
+            return MSN;
 
-    case 'Internet':
-    case 'WebResume':
-      return ie;
+        case 'Internet':
+        case 'WebResume':
+            return ie;
 
-    case 'Settings':
-      return settings;
+        case 'Settings':
+            return settings;
 
-    case 'Hard Disk (C:)':
-    case 'Hard Disk (D:)':
-      return disk;
+        case 'Hard Disk (C:)':
+        case 'Hard Disk (D:)':
+            return disk;
 
-    case 'CD-ROM':
-    case 'cd-rom':
-      return rom;
+        case 'CD-ROM':
+        case 'cd-rom':
+            return rom;
 
-    case 'Bitcoin':
-    case 'bitcoin':
-      return btc
+        case 'Bitcoin':
+        case 'bitcoin':
+            return btc
 
-    case name[0] === '0':
-    case 'Photo':
-    case 'Jpeg':
-      return jpeg;
+        case name[0] === '0':
+        case 'Photo':
+        case 'Jpeg':
+            return jpeg;
 
-    case 'bin':
-    case 'RecycleBin':
-    case 'recyclebin':
-      return binEmp;
+        case 'bin':
+        case 'RecycleBin':
+        case 'recyclebin':
+            return binEmp;
 
-    case 'ResetStorage':
-      return reset;
+        case 'ResetStorage':
+            return reset;
 
-    case 'Github':
-      return github;
+        case 'Github':
+            return github;
 
-    case "paint":
-    case "Paint":
-      return paint;
+        case "paint":
+        case "Paint":
+            return paint;
 
-    case "AiAgent":
-      return aiagent;
+        case "AiAgent":
+            return aiagent;
 
-    case "Glitch":
-    case "glitch":
-      return glitch;
+        case "Glitch":
+        case "glitch":
+            return glitch;
 
-    case "patch":
-    case "Patch":
-      return patch;
+        case "patch":
+        case "Patch":
+            return patch;
 
-    case "3dObject":
-      return ThreedObject;
+        case "3dObject":
+            return ThreedObject;
 
-    default:
-      return null;
-  }
+        case "Contract":
+            return Resume;
+
+        default:
+            return null;
+    }
 }
 
 // set photo to the current photo
 export function handleDoubleClickPhotoOpen(name, setCurrentPhoto) {
 
-  switch (name) {
-    case '001':
-      setCurrentPhoto({ name: name, pic: firstPic });
-      break;
+    switch (name) {
+        case '001':
+            setCurrentPhoto({ name: name, pic: firstPic });
+            break;
 
-    case '002':
-      setCurrentPhoto({ name: name, pic: secondPic });
-      break;
+        case '002':
+            setCurrentPhoto({ name: name, pic: secondPic });
+            break;
 
-    case '003':
-      setCurrentPhoto({ name: name, pic: thirdPic });
-      break;
+        case '003':
+            setCurrentPhoto({ name: name, pic: thirdPic });
+            break;
 
-    case '004':
-      setCurrentPhoto({ name: name, pic: fourthPic });
-      break;
+        case '004':
+            setCurrentPhoto({ name: name, pic: fourthPic });
+            break;
 
-    case '005':
-      setCurrentPhoto({ name: name, pic: fifthPic });
-      break;
+        case '005':
+            setCurrentPhoto({ name: name, pic: fifthPic });
+            break;
 
-    case '006':
-      setCurrentPhoto({ name: name, pic: sixthPic });
-      break;
+        case '006':
+            setCurrentPhoto({ name: name, pic: sixthPic });
+            break;
 
-    case '007':
-      setCurrentPhoto({ name: name, pic: seventhPic });
-      break;
+        case '007':
+            setCurrentPhoto({ name: name, pic: seventhPic });
+            break;
 
-    case '008':
-      setCurrentPhoto({ name: name, pic: eighthPic });
-      break;
+        case '008':
+            setCurrentPhoto({ name: name, pic: eighthPic });
+            break;
 
-    case '009':
-      setCurrentPhoto({ name: name, pic: ninthPic });
-      break;
+        case '009':
+            setCurrentPhoto({ name: name, pic: ninthPic });
+            break;
 
-    case '010':
-      setCurrentPhoto({ name: name, pic: tenthPic });
-      break;
+        case '010':
+            setCurrentPhoto({ name: name, pic: tenthPic });
+            break;
 
-    case '011':
-      setCurrentPhoto({ name: name, pic: eleventhPic });
-      break;
+        case '011':
+            setCurrentPhoto({ name: name, pic: eleventhPic });
+            break;
 
-    default: break;
-  }
+        default:
+            break;
+    }
 }
 
 export function handleDoubleClickPhotoOpenMobile(name, setCurrentPhoto, lastTapTime, setLastTapTime) {
-  const now = Date.now();
-  if (now - lastTapTime < 300) {
+    const now = Date.now();
+    if (now - lastTapTime < 300) {
 
-    switch (name) {
-      case '001':
-        setCurrentPhoto({ name: name, pic: firstPic });
-        break;
+        switch (name) {
+            case '001':
+                setCurrentPhoto({ name: name, pic: firstPic });
+                break;
 
-      case '002':
-        setCurrentPhoto({ name: name, pic: secondPic });
-        break;
+            case '002':
+                setCurrentPhoto({ name: name, pic: secondPic });
+                break;
 
-      case '003':
-        setCurrentPhoto({ name: name, pic: thirdPic });
-        break;
+            case '003':
+                setCurrentPhoto({ name: name, pic: thirdPic });
+                break;
 
-      case '004':
-        setCurrentPhoto({ name: name, pic: fourthPic });
-        break;
+            case '004':
+                setCurrentPhoto({ name: name, pic: fourthPic });
+                break;
 
-      case '005':
-        setCurrentPhoto({ name: name, pic: fifthPic });
-        break;
+            case '005':
+                setCurrentPhoto({ name: name, pic: fifthPic });
+                break;
 
-      case '006':
-        setCurrentPhoto({ name: name, pic: sixthPic });
-        break;
+            case '006':
+                setCurrentPhoto({ name: name, pic: sixthPic });
+                break;
 
-      case '007':
-        setCurrentPhoto({ name: name, pic: seventhPic });
-        break;
+            case '007':
+                setCurrentPhoto({ name: name, pic: seventhPic });
+                break;
 
-      case '008':
-        setCurrentPhoto({ name: name, pic: eighthPic });
-        break;
+            case '008':
+                setCurrentPhoto({ name: name, pic: eighthPic });
+                break;
 
-      case '009':
-        setCurrentPhoto({ name: name, pic: ninthPic });
-        break;
+            case '009':
+                setCurrentPhoto({ name: name, pic: ninthPic });
+                break;
 
-      case '010':
-        setCurrentPhoto({ name: name, pic: tenthPic });
-        break;
+            case '010':
+                setCurrentPhoto({ name: name, pic: tenthPic });
+                break;
 
-      case '011':
-        setCurrentPhoto({ name: name, pic: eleventhPic });
-        break;
+            case '011':
+                setCurrentPhoto({ name: name, pic: eleventhPic });
+                break;
 
-      default: break;
+            default:
+                break;
+        }
     }
-  }
-  setLastTapTime(now);
+    setLastTapTime(now);
 }
 
 // click to open links
 export function handleDoubleClickiframe(name, setOpenProjectExpand, setProjectUrl) {
 
-  switch (name) {
-    case 'Dexscreener':
-      setProjectUrl(import.meta.env.VITE_DEXSCREENER_URL);
-      break;
-    case 'Pfpglitch':
-      setProjectUrl("https://gen.glitchmeme.wtf/");
-      break;
+    switch (name) {
+        case 'Dexscreener':
+            setProjectUrl(
+                import.meta.env.VITE_DEXSCREENER_URL);
+            break;
+        case 'Pfpglitch':
+            setProjectUrl("https://gen.glitchmeme.wtf/");
+            break;
 
-    case 'Note':
-      setProjectUrl('https://fullstack-stickynotes.netlify.app/');
-      break;
+        case 'Note':
+            setProjectUrl('https://fullstack-stickynotes.netlify.app/');
+            break;
 
-    case 'AiAgent':
-      setProjectUrl('https://yuteoctober.github.io/AI_chatbot/');
-      break;
+        case 'AiAgent':
+            setProjectUrl('https://yuteoctober.github.io/AI_chatbot/');
+            break;
 
-    case '3dObject':
-      setProjectUrl('https://yuteoctober.github.io/3d_book/');
-      break;
+        case '3dObject':
+            setProjectUrl('https://yuteoctober.github.io/3d_book/');
+            break;
 
-    default: break;
-  }
+        default:
+            break;
+    }
 }
 
 export function handleDoubleTapiframeMobile(name, lastTapTime, setLastTapTime, setOpenProjectExpand, setProjectUrl) {
-  const now = Date.now();
-  if (now - lastTapTime < 300) {
-    switch (name) {
-      case 'Dexscreener':
-        setProjectUrl(import.meta.env.VITE_DEXSCREENER_URL);
-        break;
-      case 'Pfpglitch':
-        setProjectUrl("https://gen.glitchmeme.wtf/");
-        break;
+    const now = Date.now();
+    if (now - lastTapTime < 300) {
+        switch (name) {
+            case 'Dexscreener':
+                setProjectUrl(
+                    import.meta.env.VITE_DEXSCREENER_URL);
+                break;
+            case 'Pfpglitch':
+                setProjectUrl("https://gen.glitchmeme.wtf/");
+                break;
 
-      case 'Note':
-        setProjectUrl('https://fullstack-stickynotes.netlify.app/');
-        break;
+            case 'Note':
+                setProjectUrl('https://fullstack-stickynotes.netlify.app/');
+                break;
 
-      case 'AiAgent':
-        setProjectUrl('https://yuteoctober.github.io/AI_chatbot/');
-        break;
+            case 'AiAgent':
+                setProjectUrl('https://yuteoctober.github.io/AI_chatbot/');
+                break;
 
-      case '3dObject':
-        setProjectUrl('https://yuteoctober.github.io/3d_book/');
-        break;
+            case '3dObject':
+                setProjectUrl('https://yuteoctober.github.io/3d_book/');
+                break;
 
-      default: break;
+            default:
+                break;
+        }
     }
-  }
-  setLastTapTime(now);
+    setLastTapTime(now);
 }
 
 export function handleDoubleClickEnterLink(name, handleshow) {
 
-  switch (name) {
-    case 'Dexscreener': window.open(import.meta.env.VITE_DEXSCREENER_URL, '_blank'); break;
-    case 'Pfpglitch': window.open('https://gen.glitchmeme.wtf/', '_blank'); break;
-    case 'Note': window.open('https://fullstack-stickynotes.netlify.app/', '_blank'); break;
-    case 'Type': window.open('https://yuteoctober.github.io/typingGame/', '_blank'); break;
-    case '3dObject': window.open('https://yuteoctober.github.io/3d_book/', '_blank'); break;
-    case 'X':
-      handleshow('X');
-      break;
+    switch (name) {
+        case 'Dexscreener':
+            window.open(
+                import.meta.env.VITE_DEXSCREENER_URL, '_blank');
+            break;
+        case 'Pfpglitch':
+            window.open('https://gen.glitchmeme.wtf/', '_blank');
+            break;
+        case 'Note':
+            window.open('https://fullstack-stickynotes.netlify.app/', '_blank');
+            break;
+        case 'Type':
+            window.open('https://yuteoctober.github.io/typingGame/', '_blank');
+            break;
+        case '3dObject':
+            window.open('https://yuteoctober.github.io/3d_book/', '_blank');
+            break;
+        case 'X':
+            handleshow('X');
+            break;
 
-    default: break;
-  }
+        default:
+            break;
+    }
 }
 
 
 export function handleDoubleTapEnterMobile(name, lastTapTime, setLastTapTime, setOpenProjectExpand, setProjectUrl) {
-  const now = Date.now();
-  if (now - lastTapTime < 300) {
-    switch (name) {
-      case 'Dexscreener': window.open(import.meta.env.VITE_DEXSCREENER_URL, '_blank'); break;
-      case 'Pfpglitch': window.open('https://gen.glitchmeme.wtf/', '_blank'); break;
-      case 'Note': window.open('https://fullstack-stickynotes.netlify.app/', '_blank'); break;
-      case 'Type': window.open('https://yuteoctober.github.io/typingGame/', '_blank'); break;
-      case 'X': window.open(import.meta.env.VITE_X_URL, '_blank'); break;
-      case '3dObject': window.open('https://yuteoctober.github.io/3d_book/', '_blank'); break;
-      default: break;
+    const now = Date.now();
+    if (now - lastTapTime < 300) {
+        switch (name) {
+            case 'Dexscreener':
+                window.open(
+                    import.meta.env.VITE_DEXSCREENER_URL, '_blank');
+                break;
+            case 'Pfpglitch':
+                window.open('https://gen.glitchmeme.wtf/', '_blank');
+                break;
+            case 'Note':
+                window.open('https://fullstack-stickynotes.netlify.app/', '_blank');
+                break;
+            case 'Type':
+                window.open('https://yuteoctober.github.io/typingGame/', '_blank');
+                break;
+            case 'X':
+                window.open(
+                    import.meta.env.VITE_X_URL, '_blank');
+                break;
+            case '3dObject':
+                window.open('https://yuteoctober.github.io/3d_book/', '_blank');
+                break;
+            default:
+                break;
+        }
     }
-  }
-  setLastTapTime(now);
+    setLastTapTime(now);
 }
 
 export function iconContainerSize(size) {
-  switch (size) {
-    case 1:
-      return { width: '85px', height: '90px' };
-    case 2:
-      return { width: '80px', height: '85px' };
-    case 3:
-      return { width: '75px', height: '80px' };
-    case 4:
-      return { width: '70px', height: '75px' };
-    case 5:
-      return { width: '65px', height: '70px' };
-    default:
-      return { width: '65px', height: '70px' };
-  }
+    switch (size) {
+        case 1:
+            return { width: '85px', height: '90px' };
+        case 2:
+            return { width: '80px', height: '85px' };
+        case 3:
+            return { width: '75px', height: '80px' };
+        case 4:
+            return { width: '70px', height: '75px' };
+        case 5:
+            return { width: '65px', height: '70px' };
+        default:
+            return { width: '65px', height: '70px' };
+    }
 }
 export function iconImgSize(size) {
-  switch (size) {
-    case 1:
-      return { width: '55px' };
-    case 2:
-      return { width: '50px' };
-    case 3:
-      return { width: '45px' };
-    case 4:
-      return { width: '40px' };
-    case 5:
-      return { width: '35px' };
-    default:
-      return { width: '35px' };
-  }
+    switch (size) {
+        case 1:
+            return { width: '55px' };
+        case 2:
+            return { width: '50px' };
+        case 3:
+            return { width: '45px' };
+        case 4:
+            return { width: '40px' };
+        case 5:
+            return { width: '35px' };
+        default:
+            return { width: '35px' };
+    }
 }
 export function iconTextSize(size) {
-  switch (size) {
-    case 1:
-      return { fontSize: '16px', lineHeight: '13px', number: 1 };
-    case 2:
-      return { fontSize: '15px', lineHeight: '12px', number: 2 };
-    case 3:
-      return { fontSize: '14px', lineHeight: '12px', number: 3 };
-    case 4:
-      return { fontSize: '13px', number: 4 };
-    case 5:
-      return { fontSize: '12px', number: 5 };
-    default:
-      return { fontSize: '12px', number: 5 };
-  }
+    switch (size) {
+        case 1:
+            return { fontSize: '16px', lineHeight: '13px', number: 1 };
+        case 2:
+            return { fontSize: '15px', lineHeight: '12px', number: 2 };
+        case 3:
+            return { fontSize: '14px', lineHeight: '12px', number: 3 };
+        case 4:
+            return { fontSize: '13px', number: 4 };
+        case 5:
+            return { fontSize: '12px', number: 5 };
+        default:
+            return { fontSize: '12px', number: 5 };
+    }
 }

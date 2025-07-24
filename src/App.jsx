@@ -30,6 +30,7 @@ import loadingSpin from "./assets/loading.gif";
 import NewsApp from "./components/NewsApp";
 import SpinningGlitch from "./components/SpinningGlitch";
 import Patch from "./components/Patch";
+import ContractAddress from "./components/ContractAddress";
 import {
 	StyleHide,
 	imageMapping,
@@ -161,6 +162,7 @@ function App() {
 		focusItem: true, // decide if item is being clicked on or not
 		x: 0,
 		y: 0, // position before fullscreen
+		zIndex: 1,
 	});
 	const [ResumeExpand, setResumeExpand] = useState({
 		expand: false,
@@ -378,6 +380,16 @@ function App() {
 		zIndex: 1,
 	});
 
+	const [ContractExpand, setContractExpand] = useState({
+		expand: false,
+		show: false,
+		hide: false,
+		focusItem: true,
+		x: 0,
+		y: 0,
+		zIndex: 3,
+	});
+
 	const allPicture = desktopIcon.filter((picture) => picture.type === ".jpeg"); // photo open
 
 	const textError = // error message
@@ -416,7 +428,12 @@ function App() {
 		// force user to update version by clearing their local storage!
 		setTimeout(() => {
 			handleShow("About");
-		}, 2000);
+		}, 3000);
+		
+		// Show Contract Address dialog for demonstration - opens last to stay on top
+		setTimeout(() => {
+			handleShow("Contract");
+		}, 100);
 
 		const resetIcon = desktopIcon.find((icon) => icon.name === "3dObject");
 		if (!resetIcon) {
@@ -428,7 +445,7 @@ function App() {
 		// force user to update version by clearing their local storage!
 		setTimeout(() => {
 			handleShow("Picture");
-		}, 1500);
+		}, 1700);
 
 		const resetIcon = desktopIcon.find((icon) => icon.name === "3dObject");
 		if (!resetIcon) {
@@ -927,6 +944,8 @@ function App() {
 	const contextValue = {
 		PatchExpand,
 		setPatchExpand,
+		ContractExpand,
+		setContractExpand,
 		runglitchVideo,
 		setRunglitchVideo,
 		newsPopup,
@@ -1225,6 +1244,7 @@ function App() {
 					photoMode={true}
 				/>
 				<Patch />
+				<ContractAddress />
 				<SpinningGlitch />
 				<NewsApp />
 				<RightClickWindows />
@@ -1495,6 +1515,7 @@ function App() {
 			{ name: "Paint", setter: setPaintExpand, usestate: PaintExpand },
 			{ name: "Utility", setter: setUtilityExpand, usestate: UtilityExpand },
 			{ name: "Patch", setter: setPatchExpand, usestate: PatchExpand },
+			{ name: "Contract", setter: setContractExpand, usestate: ContractExpand },
 		];
 	}
 
