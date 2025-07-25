@@ -21,7 +21,7 @@ function ContractAddress() {
 	} = useContext(UseContext);
 
 	// Static contract address - you can replace this with your actual CA
-	const contractAddress = "";
+	const contractAddress = "FxYgERdMJRmCBPQjxqXcKahWyKiNDBXye11JLZgGbonk";
 
 	function handleDragStop(event, data) {
 		const positionX = data.x;
